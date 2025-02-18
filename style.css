@@ -164,7 +164,7 @@ img:hover {
 
 
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 570px) {
     .navbar {
         padding: 15px 20px;
         display: flex;
