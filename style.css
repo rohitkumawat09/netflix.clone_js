@@ -1,128 +1,132 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins";
 }
 
-.backgroundImage{
+.backgroundImage {
     width: 100%;
     height: 100vh;
-}
-.NETFLIX{
-    margin-top:60px;
-}
-
-.NETFLIX h1{
-padding-left: 60px;
+    display: flex;
+    align-items: center;
 }
 
-.notbook { height: 290px;
+.NETFLIX {
+    margin-top: 60px;
+}
+
+.NETFLIX h1 {
+    padding-left: 60px;
+}
+
+.notbook {
+    height: 290px;
     width: 200px;
-   
+
     border-radius: 10px;
-    
+
 }
-.notbook img{
+
+.notbook img {
     height: 100%;
     width: 100%;
-   
-   
+
+
     gap: 50px;
     align-items: center;
     transition: transform 0.3s ease-in-out;
 }
 
-img:hover{
+img:hover {
     transform: scale(1.05);
-} 
+}
 
 
 #Netflix {
-   
-   margin-top: 10px;
-   display: flex;
 
-   gap: 20px;
-   padding: 50px;
- 
-   overflow-x:scroll ;
-   overflow-y:hidden ;
- 
+    margin-top: 10px;
+    display: flex;
+
+    gap: 20px;
+    padding: 50px;
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+
 }
 
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
-#trending{
-  
-    margin-top: 10px;
-    display: flex; 
-  
-    gap: 20px;
-    padding: 50px;
- 
-   overflow-x:scroll ;
-   overflow-y:hidden ;
-  
-}
+#trending {
 
-#topRated{
- 
     margin-top: 10px;
     display: flex;
-   align-items: center;
 
-   gap: 20px;
-   padding: 50px;
-   overflow-x:scroll ;
-   overflow-y:hidden ;
+    gap: 20px;
+    padding: 50px;
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+
 }
 
-#ActionMovie{
+#topRated {
 
-   margin-top: 10px;
-   padding: 50px;
-   display: flex;
-   align-items: center;
- 
-   gap: 20px;
-   overflow-x:scroll ;
-   overflow-y:hidden ;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+    padding: 50px;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
-.h1{
-padding: 30px;
+#ActionMovie {
+
+    margin-top: 10px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.h1 {
+    padding: 30px;
 }
 
 
- .navbar  {
+.navbar {
     background: rgba(35, 34, 34, 0.51);
 }
 
 .navbar {
-    display: flex ;
-        justify-content: space-between;
-        padding: 30px 60px;
-        position: fixed;
-        top: 0;
-        transition: all .45s ease-in;
-        width: 100%;
-        z-index: 2;
-    
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 60px;
+    position: fixed;
+    top: 0;
+    transition: all .45s ease-in;
+    width: 100%;
+    z-index: 2;
+
 }
 
-.logo{
+.logo {
     width: 120px;
- }
+}
 
 
 
 
- .content {
-    padding-top: 270px;
+.content {
     width: 700px;
     font-weight: 800;
     font-size: 20px;
@@ -130,23 +134,27 @@ padding: 30px;
     margin-left: 40px;
 }
 
-.content h1{
- margin: 30px;   
+.content h1 {
+    margin-bottom: 1rem;
+    font-size: 48px;
 }
 
-.btn button{
-  margin: 30px 0px 0px 40px;
-  /* width: 100px; */
-  /* height: 40px; */
-  padding: 15px 50px 15px 50px;
-  background-color:black;
-  color: white;
-  font-size: 20px;
-  border-radius: 10px;
+.btn {
+    margin-bottom: 1rem;
+}
+
+.btn button {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 15px 50px 15px 50px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
 }
 
 
-.btn :hover{
+.btn :hover {
     color: black;
     background-color: aliceblue;
 }
@@ -154,6 +162,66 @@ padding: 30px;
 
 
 
- 
 
 
+@media screen and (max-width: 320px) {
+    .navbar {
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 80px;
+        height: 30px;
+    }
+
+    .emoji {
+        width: 30px;
+    }
+
+    .content {
+        width: 90%;
+    font-size: 2px;
+    }
+.content p{
+    width:240px;
+    font-size: 15px;
+    font-weight: 200px;
+}
+    .content h1 {
+        font-size: 3rem;
+    }
+
+    .btn button {
+        padding: 3px 10px;
+        font-size: 10px;
+    }
+
+    .NETFLIX h1, .notbook img {
+        font-size: 1.5rem;
+        padding-left: 10px;
+    }
+
+    #Netflix, #trending, #topRated, #ActionMovie {
+        gap: 10px;
+        padding: 20px;
+        display: flex;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .notbook {
+        height: 250px;
+        width: 160px;
+    }
+
+    .content {
+        top: 30%;
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        margin-top: 1rem;
+    }
+}

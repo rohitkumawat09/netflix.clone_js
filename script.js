@@ -26,10 +26,10 @@ console.log(data);
 getRandomImage()
 
 // function createMovieCard(movie, container) {
-//     const movieImg = document.createElement("img");
-//     movieImg.src = IMAGE_URL + movie.poster_path;
-//     container.appendChild(movieImg);
-//     movieImg.classList = "notbook"
+//     const movieName = document.createElement("img");
+//     movieName.src = IMAGE_URL + movie.poster_path;
+//     container.appendChild(movieName);
+//     movieName.classList = "notbook"
 // }
 
 // data.forEach((movies, index) => {
@@ -41,20 +41,20 @@ getRandomImage()
 // });
 
 
-function displayMovies(movie , container){
-movie.forEach((movies) => {
-    const movieImg = document.createElement("img");
-        movieImg.src = IMAGE_URL + movies.poster_path;
-        movieImg.classList = "notbook"
+function displayMovies(movie, container) {
+    movie.forEach((movies) => {
+        const movieName = document.createElement("img");
+        movieName.src = IMAGE_URL + movies.poster_path;
+        movieName.classList = "notbook"
 
-        container.appendChild(movieImg);
-});
+        container.appendChild(movieName);
+    });
 }
 
-displayMovies(data[0],original)
-displayMovies(data[1],trending)
-displayMovies(data[2],topRated)
-displayMovies(data[3],actionMovies)
+displayMovies(data[0], original)
+displayMovies(data[1], trending)
+displayMovies(data[2], topRated)
+displayMovies(data[3], actionMovies)
 
 
 
@@ -65,8 +65,12 @@ function getRandomImage() {
     const rademmovie = data[0][randem]
     console.log(rademmovie);
 
-    const movieImg = document.createElement("h1")
-    movieImg.textContent = rademmovie.name
+    const movieName = document.createElement("h1")
+    movieName.textContent = rademmovie.name;
+
+    content.append(movieName);
+
+    createButtons();
 
     const heading = document.createElement("P")
     heading.textContent = rademmovie.overview
@@ -76,8 +80,18 @@ function getRandomImage() {
     backgroundImage.style.backgroundSize = "cover"
     backgroundImage.style.backgroundPosition = "center";
 
-    content.append(movieImg, heading)
+    content.append(heading)
+}
 
+function createButtons() {
+    const div = document.createElement("div");
+    const play = document.createElement("button");
+    const myList = document.createElement("button");
 
+    div.classList.add("btn");
+    play.innerText = "Play";
+    myList.innerText = "My List";
 
+    div.append(play, myList);
+    content.append(div);
 }
