@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+.backgroundImage{
+    width: 100%;
+    height: 100vh;
+}
+.NETFLIX{
+    margin-top: 160px;
+}
+
+.NETFLIX h1{
+padding-left: 60px;
+}
+
+.notbook { height: 290px;
+    width: 200px;
+   
+    border-radius: 10px;
+    
+}
+.notbook img{
+    height: 100%;
+    width: 100%;
+   
+   
+    gap: 50px;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover{
+    transform: scale(1.05);
+} 
+
+
+#Netflix {
+   
+   margin-top: 10px;
+   display: flex;
+
+   gap: 20px;
+   padding: 50px;
+ 
+   overflow-x:scroll ;
+   overflow-y:hidden ;
+ 
+}
+
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+#trending{
+  
+    margin-top: 10px;
+    display: flex; 
+  
+    gap: 20px;
+    padding: 50px;
+ 
+   overflow-x:scroll ;
+   overflow-y:hidden ;
+  
+}
+
+#topRated{
+ 
+    margin-top: 10px;
+    display: flex;
+   align-items: center;
+
+   gap: 20px;
+   padding: 50px;
+   overflow-x:scroll ;
+   overflow-y:hidden ;
+}
+
+#ActionMovie{
+
+   margin-top: 10px;
+   padding: 50px;
+   display: flex;
+   align-items: center;
+ 
+   gap: 20px;
+   overflow-x:scroll ;
+   overflow-y:hidden ;
+}
+
+.h1{
+padding: 30px;
+}
+
+
+ .navbar  {
+    background: #130f0f;
+}
+
+.navbar {
+    display: flex ;
+        justify-content: space-between;
+        padding: 30px 60px;
+        position: fixed;
+        top: 0;
+        transition: all .45s ease-in;
+        width: 100%;
+        z-index: 2;
+    
+}
+
+.logo{
+    width: 120px;
+ };
+
+ 
+
+
