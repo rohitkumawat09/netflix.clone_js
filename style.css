@@ -10,7 +10,7 @@
     height: 100vh;
 }
 .NETFLIX{
-    margin-top: 160px;
+    margin-top:60px;
 }
 
 .NETFLIX h1{
@@ -99,7 +99,7 @@ padding: 30px;
 
 
  .navbar  {
-    background: #130f0f;
+    background: rgba(35, 34, 34, 0.51);
 }
 
 .navbar {
@@ -122,7 +122,7 @@ padding: 30px;
 
 
  .content {
-    padding-top: 400px;
+    padding-top: 270px;
     width: 700px;
     font-weight: 800;
     font-size: 20px;
@@ -130,6 +130,9 @@ padding: 30px;
     margin-left: 40px;
 }
 
+.content h1{
+ margin: 30px;   
+}
 
 .btn button{
   margin: 30px 0px 0px 40px;
@@ -139,6 +142,7 @@ padding: 30px;
   background-color:black;
   color: white;
   font-size: 20px;
+  border-radius: 10px;
 }
 
 
