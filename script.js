@@ -5,17 +5,34 @@ const original = document.querySelector("#Netflix");
 const trending = document.querySelector("#trending");
 const topRated = document.querySelector("#topRated");
 const actionMovies = document.querySelector("#ActionMovie");
+const fetchActionMovies=document.querySelector("#fetchActionMovies")
+const fetchComedyMovies=document.querySelector("#ComedyMovies")
+const fetchHorrorMovies=document.querySelector("#HorrorMovies")
+const fetchRomanceMovies=document.querySelector("#fetchRomanceMovies")
+const fetchDocumentaries=document.querySelector("#Documentaries")
 const backgroundImage = document.querySelector(".backgroundImage");
 const content = document.querySelector(".content")
 
 const data = [];
 
+// async function fetchDataFromURL(value) {
+//     const response = await fetch(base_url + value);
+//     const result = await response.json();
+//     console.log(result.results);
+//     return result.results;
+// }
 async function fetchDataFromURL(value) {
-    const response = await fetch(base_url + value);
-    const result = await response.json();
-    console.log(result.results);
-    return result.results;
+    try {
+        const response = await fetch(base_url + value);
+        const result = await response.json();
+        console.log(result.results);
+        return result.results;
+    } catch (error) {
+        console.error(error);
+        return [];
+    }
 }
+
 
 for (let i in requests) {
     const categoryData = await fetchDataFromURL(requests[i]);
@@ -25,20 +42,7 @@ console.log(data);
 
 getRandomImage()
 
-// function createMovieCard(movie, container) {
-//     const movieName = document.createElement("img");
-//     movieName.src = IMAGE_URL + movie.poster_path;
-//     container.appendChild(movieName);
-//     movieName.classList = "notbook"
-// }
 
-// data.forEach((movies, index) => {
-//     if (index === 0) movies.forEach((movie) => createMovieCard(movie, original));
-//     else if (index === 1) movies.forEach((movie) => createMovieCard(movie, trending));
-//     else if (index === 2) movies.forEach((movie) => createMovieCard(movie, topRated));
-//     else if (index === 3) movies.forEach((movie) => createMovieCard(movie, actionMovies));
-
-// });
 
 
 function displayMovies(movie, container) {
@@ -55,9 +59,11 @@ displayMovies(data[0], original)
 displayMovies(data[1], trending)
 displayMovies(data[2], topRated)
 displayMovies(data[3], actionMovies)
-
-
-
+displayMovies(data[4] ,fetchActionMovies)
+displayMovies(data[5] ,fetchComedyMovies)
+displayMovies(data[6] ,fetchHorrorMovies)
+displayMovies(data[7] ,fetchRomanceMovies)
+displayMovies(data[8] ,fetchDocumentaries)
 
 
 function getRandomImage() {
@@ -95,3 +101,4 @@ function createButtons() {
     div.append(play, myList);
     content.append(div);
 }
+

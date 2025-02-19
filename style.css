@@ -86,7 +86,7 @@ img:hover {
     overflow-y: hidden;
 }
 
-#ActionMovie {
+#Netflix, #trending, #topRated, #ActionMovie,#ActionMovie,#fetchActionMovies,#ComedyMovies,#HorrorMovies,#fetchRomanceMovies,#Documentaries{
 
     margin-top: 10px;
     padding: 50px;
@@ -203,7 +203,7 @@ img:hover {
         padding-left: 10px;
     }
 
-    #Netflix, #trending, #topRated, #ActionMovie {
+    #Netflix, #trending, #topRated, #ActionMovie,#ActionMovie,#fetchActionMovies,#ComedyMovies,#HorrorMovies,#fetchRomanceMovies,#Documentaries {
         gap: 10px;
         padding: 20px;
         display: flex;
